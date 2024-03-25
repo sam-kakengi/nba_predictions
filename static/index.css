@@ -1,0 +1,582 @@
+/* ------ Main, body --------- */
+
+body {
+    height: 100vh;
+}
+
+/* ---- Utility Classes ---- */
+
+.oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+.squada-one {
+    font-family: 'Squada One', sans-serif;
+}
+
+
+.content-list-fs {
+    font-size: 2rem;
+}
+
+
+.title-fs-c {
+    font-size: 3rem;
+    
+}
+
+
+
+.title-background {
+    background-color: none;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+
+.ta-center {
+    text-align: center;
+}
+
+
+
+/* ----- Navigation bar ------- */
+
+
+/* ----- Sections Container ------ */
+
+
+
+.section-1 {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100%;
+}
+
+.welcome-content {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.kobe-image {
+    background-image: url('images/kobe.png'); 
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+}
+
+
+.welcome-area {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    
+}
+
+.nav-and-content-container {
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+
+/* ---- Navigation bar ---- */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 5rem;
+    font-size: 2rem;
+}
+
+
+.navbar-list li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/* ---- Main Content ----- */ 
+
+
+
+/* --- Search Bar Content --- */
+
+.search-container {
+    position: relative; 
+    display: flex;
+    margin: auto;
+    border: 2px solid gray;
+    width: 60%;
+}
+
+
+.search-form {
+    width: 100%;
+    display: flex;
+}
+
+
+.search-container input[type="text"] {
+    padding: 8px;
+    border: none;
+    flex: 1;
+    font-size: 1.3rem; 
+
+}
+
+
+.search-container input[type="text"]:focus {
+    outline: none;
+}
+
+
+.search-container button[type="submit"] {
+    padding: 8px 14px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    right: 1%;
+}
+
+
+/* ---- Welcome Buttons ---- */
+
+.welcome-buttons-container {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.welcome-buttons-container button {
+    border: none;
+    padding: 1rem;
+    background-color: gray;
+    border-radius: 2rem;
+}
+
+
+/* ---- Content Container ---- */
+
+.contentContainer {
+    margin: auto;
+    margin-top: 3rem;
+    background-color: dimgray;
+    border: 3px solid black;
+    width: 75%;
+    height: 40vh;
+    max-height: 40vh; 
+    overflow-y: auto;
+    
+}
+
+
+
+.content-container-placeholder {
+    margin-top: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+.game-details {
+    list-style-type: none;
+    color: white;
+    
+}
+
+
+.game {
+    
+    display: block; 
+    position: relative;
+    margin-bottom: 1rem;
+    
+}
+
+.game::after {
+    content: ""; 
+    position: absolute;
+    bottom: 0;
+    left: calc((100% - 50%) / 2 + 1rem);
+    width: 50%; 
+    height: 2px; 
+    background-color: white; 
+    
+}
+
+dotlottie-player {
+    margin: auto;
+}
+
+
+
+/* ---- Top Performers ---- */
+
+.top-performer-img {
+    margin-top: 4rem;
+    width: 12rem;
+    height: 12rem;
+    border: solid 4px white;
+    border-radius: 100%;
+    
+}
+
+.top-performer-name {
+    font-family: 'Tauri';
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+
+.player-stats {
+    margin-top: 3rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.player-container {
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.statsList {
+    margin: 0;
+    padding: 0;
+    font-family: 'Squada One';
+    font-size: 1.4rem;
+    list-style-type: none;
+    color: white;
+    width: 50%;
+}
+
+.top-performer-name-img-container {
+    display: flex;
+    width: 100%;
+}
+
+
+.hr-top-performers {
+    margin: auto;
+    width: 85%;
+    height: 0.5rem;
+    color: white;
+    background-color: white;
+    border: none;
+    margin-top: 4rem;
+    opacity: 1;
+}
+
+
+/* ---- Injury Report ---- */ 
+
+.injured-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: solid 3px black;
+}
+
+
+.injury-details-list  {
+    list-style-type: none;
+    color: white;
+    font-family: 'Squada One', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.injured-player-img {
+    width: 10rem;
+    height: 10rem;
+    border: solid 3px white;
+    border-radius: 100%;
+}
+
+
+
+/* ----- Search Page ----- */
+
+.search-results-container {
+    display: flex;
+    height: 100vh;
+    
+}
+
+
+.search-results-main {
+    flex: 1;
+    width: 100%;
+}
+
+
+
+.search-results-navbar-container {
+    text-align: center;
+}
+
+
+.search-results-navbar {
+    margin-top: 3rem;
+}
+
+
+.search-results-navlist {
+    list-style-type: none;
+    font-family: 'Squada One', sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.search-results-navlist li a {
+    font-size: 2rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+.search-results-player-div {
+    border: solid 3px black;
+    padding-bottom: 2rem;
+    width: 22rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    cursor: pointer;
+}
+
+
+
+
+
+.player_list {
+    list-style-type: none;
+    margin-top: 3rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    padding: 0;
+    font-family: 'Squada One', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.player_list li {
+
+    padding:0;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.player_list li a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.search-results-player-image {
+    width: 50%;
+    margin-right: 2rem;
+}
+
+
+.search-result-player-name-and-team {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    padding-left: 2rem;
+    width: 50%;
+}
+
+
+.search-result-playername {
+    font-size: 1.4rem;
+}
+
+
+.search-result-teamname {
+    font-size: 1rem;
+}
+
+
+
+.search-results-player-image {
+    margin-top: 3rem;
+    width: 8rem;
+    height: 8rem;
+    border: solid 3px black;
+}
+
+
+/* ---- Player Profile Page ---- */
+
+.player-profile-container {
+    height: 100vh;
+    background-color: gray;
+}
+
+
+.player-information-container {
+    height: 40%;
+    display: flex;
+}
+
+
+.player-information-container-start {
+    height: 100%;
+    width: 90%;
+    background-color: #552583;
+    display: flex;
+}
+
+.player-information-container-end {
+    background-color: #FDB927;
+    width: 10%;
+    height: 100%;
+}
+
+
+
+
+.player-profile-pic {
+    width: 100%;
+    height: 100%;
+}
+
+
+.player-profile-name {
+    font-family: 'Squada One', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+
+.player-profile-personal-info {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.player-profile-info-list {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    font-family: 'Squada One', sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+
+
+.player-profile-team-info {
+    flex: 1;
+}
+
+
+
+.player-personal-numbers {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    
+}
+
+
+.player-personal-numbers-list {
+    
+    font-family: 'Squada One', sans-serif;
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+    width: 50%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.player-personal-numbers-li-div {
+    border: solid 1px white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+
+.player-profile-five-recent-games {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    margin-left: 4rem;
+    
+}
+
+
+.player-profile-five-games-title {
+    font-family: 'Squada One';
+    font-size: 1.5rem;
+    color: white;
+}
+
+
+.players-five-games-table {
+    width: 75%;
+    font-size: 1rem;
+    font-family: 'Squada One', sans-serif;
+    border-collapse: collapse;
+    background-color: #898980;
+    border: 2px solid #ddd;
+    
+}
+
+.players-five-games-table th {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+.players-five-games-table td {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}

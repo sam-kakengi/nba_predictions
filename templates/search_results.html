@@ -1,0 +1,50 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div class="search-results-container">
+
+
+        
+
+
+        <div class="search-results-main">
+
+            <div class="search-results-navbar-container">
+                <nav class="search-results-navbar">
+                    <ul class="search-results-navlist">
+                        <li class="search-results-li"><a href="{{ url_for('index') }}">Home</a></li>
+                        <li class="search-results-li"><a href="">Players</a></li>
+                        <li class="search-results-li"><a href="">Teams</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+
+            <ul class="player_list">
+
+                {% for player in players %}
+                    
+                    <div class="search-results-player-div" onclick="window.location.href='/player/{{ player.player_id }}'">
+                        <div class="search-result-player-name-and-team">
+                            <li class="search-result-playername"><a href="/player/{{ player.player_id }}">{{ player.player_name | title }}</a></li>
+                            <li class="search-result-teamname"><a href="/team/{{ player.team.team_name }}">{{ player.team.team_name }}</a></li>
+                        </div>
+                        
+                        <img class="search-results-player-image" src="{{ player.picture }}" alt="">
+                    
+                    </div>
+
+                {% endfor %}
+                
+            </ul>
+        </div>
+
+
+        <div class="kobe-image"></div>
+
+    </div>
+
+
+{% endblock %}
+

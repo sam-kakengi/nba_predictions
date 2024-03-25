@@ -1,0 +1,160 @@
+{% extends 'index.html' %}
+
+{% block content %}
+
+    <div class="player-profile-container">
+        
+
+        <div class="player-information-container">
+            <div class="player-information-container-start">
+                <div class="player-profile-image">
+                    <img class="player-profile-pic" src="{{ player['picture'] }}" alt="">
+                </div>
+
+                <div class="player-profile-personal-info">
+                    <h2 class="player-profile-name">{{ player['player_name'] }}</h2>
+                    <ul class="player-profile-info-list">
+                        <li>{{ player['team'] }}</li>
+                        <li> | </li>
+                        <li> {{ player['position'] }}</li>
+                        <li></li>
+                    </ul>
+                </div>
+
+                <div class="player-profile-team-info">
+                    <img class="player-profile-pic" src="{{ team.nba_com_logo1 }}" alt="">
+                </div>
+
+            </div>
+
+            <div class="player-information-container-end">
+            </div>
+
+        </div>
+
+        <div class="player-personal-numbers">
+            <ul class="player-personal-numbers-list">
+                <div class="player-personal-numbers-li-div">
+                    <li>PPG</li>
+                    <li>{{ player['stats']['pts'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>AST</li>
+                    <li>{{ player['stats']['ast'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>REB</li>
+                    <li>{{ player['stats']['reb'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>TSP</li>
+                    <li>{{ player['stats']['effectiveShootingPercentage'] }}%</li>
+                </div class="player-personal-numbers-li-div">
+
+                <div class="player-personal-numbers-li-div">
+                    <li>GP</li>
+                    <li>{{ player['stats']['gamesPlayed'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>MINS</li>
+                    <li>{{ player['stats']['mins'] }}</li>
+                </div>
+
+            </ul>
+
+
+            <ul class="player-personal-numbers-list">
+                <div class="player-personal-numbers-li-div">
+                    <li>Weight</li>
+                    <li>{{ player['weight'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>Height</li>
+                    <li>{{ player['height'] }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>Age</li>
+                    <li>{{ age }}</li>
+                </div>
+
+                <div class="player-personal-numbers-li-div">
+                    <li>Birthdate</li>
+                    <li>{{ player['birthday'] }}</li>
+                </div class="player-personal-numbers-li-div">
+
+                <div class="player-personal-numbers-li-div">
+                    <li>College</li>
+                    <li>{{ player['college'] }}</li>
+                </div>
+
+                
+            </ul>
+        </div>
+
+
+        <div class="player-profile-five-recent-games">
+            <h1 class="player-profile-five-games-title">{{ player['player_name'] }}'s five most recent games</h1>
+            <table class="players-five-games-table">
+                <thead>
+                  <tr>
+                    <th>PTS</th>
+                    <th>REB</th>
+                    <th>AST</th>
+                    <th>FGA</th>
+                    <th>FGM</th>
+                    <th>FGP</th>
+                    <th>BLK</th>
+                    <th>STL</th>
+                    <th>OREB</th>
+                    <th>DREB</th>
+                    <th>3PA</th>
+                    <th>3PM</th>
+                    <th>3PP</th>
+                    <th>FTA</th>
+                    <th>FTM</th>
+                    <th>FTP</th>
+                    <th>MINS</th>
+                    <th>+/-</th>
+                    <th>DATE</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for game in players_games[:5] %}
+                    <tr>
+                        <td>{{ game['pts'] }}</td>
+                        <td>{{ game['reb'] }}</td>
+                        <td>{{ game['ast'] }}</td>
+                        <td>{{ game['fga'] }}</td>
+                        <td>{{ game['fgm'] }}</td>
+                        <td>{{ game['fgp'] }}</td>
+                        <td>{{ game['blk'] }}</td>
+                        <td>{{ game['stl'] }}</td>
+                        <td>{{ game['OffReb'] }}</td>
+                        <td>{{ game['DefReb'] }}</td>
+                        <td>{{ game['tptfga'] }}</td>
+                        <td>{{ game['tptfgm'] }}</td>
+                        <td>{{ game['tptfgp'] }}%</td>
+                        <td>{{ game['fta'] }}</td>
+                        <td>{{ game['ftm'] }}</td>
+                        <td>{{ game['ftp'] }}%</td>
+                        <td>{{ game['mins'] }}</td>
+                        <td>{{ game['plusMinus'] }}</td>
+                        <td>{{ game['gameDate'] }}</td>
+                        
+                        
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+        </div>
+
+    </div>
+
+{% endblock %}
