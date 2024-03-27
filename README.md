@@ -1,3 +1,2 @@
 My Stat Scouter Project:
 
-This project...
