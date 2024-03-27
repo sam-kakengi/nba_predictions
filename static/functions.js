@@ -74,7 +74,7 @@ export function fetchAndDisplayDailyGames() {
                 gameStatus.textContent = `${game.gameStatus}`;
                 gameClock.textContent = `${game.gameClock}`;
     
-                // Append list items to the list
+                
                 gameDetailsList.appendChild(homeVsAway);
                 gameDetailsList.appendChild(gameStatus);
                 gameDetailsList.appendChild(gameClock);
@@ -83,15 +83,15 @@ export function fetchAndDisplayDailyGames() {
                 const gameTime = document.createElement('li');
                 gameTime.textContent = `Start: ${game.gameTime}m`;
     
-                // Append list items to the list
+                
                 gameDetailsList.appendChild(homeVsAway);
                 gameDetailsList.appendChild(gameTime);
             }
     
-            // Append the list to the game div
+           
             gameDiv.appendChild(gameDetailsList);
     
-            // Append the game div to the content container
+            
             contentContainer.appendChild(gameDiv);
         });
         
@@ -126,13 +126,13 @@ export function fetchAndDisplayTopPerformers() {
             const nameAndList = document.createElement('div');
             playerNameAndImage.appendChild(nameAndList);
 
-            // Create player name element
+            
             const playerName = document.createElement('h2');
             playerName.classList.add("top-performer-name");
             playerName.textContent = `${index + 1} | ${player.player_name}`;
             nameAndList.appendChild(playerName);
 
-            // Create player image element
+           
             const playerImage = document.createElement('img');
             playerImage.classList.add("top-performer-img")
             playerImage.src = player.nbaComHeadshot;
@@ -144,12 +144,12 @@ export function fetchAndDisplayTopPerformers() {
 
             
 
-            // Create player stats list
+            
             const statsList = document.createElement('ul');
             statsList.classList.add("statsList")
             nameAndList.classList.add('player-stats');
 
-            // Add relevant player stats to the list
+            
             const relevantStats = ['pts', 'reb', 'ast', 'stl', 'blk'];
             relevantStats.forEach(stat => {
                 const statItem = document.createElement('li');
@@ -158,7 +158,7 @@ export function fetchAndDisplayTopPerformers() {
             
             });
 
-            // Append stats list to the player container
+            
             nameAndList.appendChild(statsList);
 
             const hr = document.createElement('hr')
@@ -171,7 +171,7 @@ export function fetchAndDisplayTopPerformers() {
                 contentContainer.appendChild(playerContainer);
             }
 
-            // Append player container to the content container
+            
             
         });
         
