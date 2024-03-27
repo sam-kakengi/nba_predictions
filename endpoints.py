@@ -222,7 +222,7 @@ def get_player_stats_averages():
 
     PLAYER_STATS_AVERAGES_CACHE_FILE = 'player_stats_averages.json'
 
-    PLAYER_STATS_AVERAGES_CACHE_EXPIRATION = 43200  # 12 hours
+    PLAYER_STATS_AVERAGES_CACHE_EXPIRATION = 43200  
 
     PLAYERS_STATS_AVERAGES_DATA = get_cached_data(PLAYER_STATS_AVERAGES_CACHE_FILE, PLAYER_STATS_AVERAGES_CACHE_EXPIRATION)
 
@@ -253,7 +253,7 @@ def find_top_performers(player_stats_list, stats_to_include, min_games=50, num_p
     
     filtered_players = [player for player in player_stats_list if player is not None and player.get('stats') is not None 
                         and 
-                        int(player['stats'].get('gamesPlayed', 0)) >= min_games] #Filtering out players whom have stats as None or have played less than 50 games.
+                        int(player['stats'].get('gamesPlayed', 0)) >= min_games]
     
 
     if not filtered_players:
@@ -266,7 +266,7 @@ def find_top_performers(player_stats_list, stats_to_include, min_games=50, num_p
         tuple(float(x.get('stats', {}).get(stat, 0)) 
         for stat in stats_to_include),
         reverse=True
-    ) #Lambda function to sort the list with 'x' as an argument, creating a tuple of each statistic that is taken from iteration of 'stats_to_include'.
+    ) 
 
 
     return sorted_players[:num_players]
@@ -326,7 +326,7 @@ def get_injury_list_data():
 
     PLAYER_INJURY_REPORTS_CACHE_FILE = 'injury_report_cache.json'
 
-    PLAYER_INJURY_REPORTS_CACHE_EXPIRATION = 43200  # 12 hours
+    PLAYER_INJURY_REPORTS_CACHE_EXPIRATION = 43200  
 
     PLAYER_INJURY_REPORT_DATA = get_cached_data(PLAYER_INJURY_REPORTS_CACHE_FILE, PLAYER_INJURY_REPORTS_CACHE_EXPIRATION)
 
